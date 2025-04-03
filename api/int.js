@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const RIOT_API_KEY = process.env.RIOT_API_KEY;
-  const summonerName = "REDSAPDES";
-  const tagLine = "FNC";
+  const summonerName = "Tonlye";
+  const tagLine = "EUW";
   const regionRouting = "europe"; // For match-v5
   const platformRouting = "euw1"; // For summoner-v4
 
