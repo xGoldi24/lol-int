@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   const RIOT_API_KEY = process.env.RIOT_API_KEY;
 
   // Replace with your real PUUID
-  const puuid = "RCZedzxGcD6_vZjvv_lX8DrAj5VjEDU0R2D2gleI_v34z9BjtuW4U50Tr-p-UEyVsPafOxFk4FNjcw";
+  const puuid = "cEPXUmRpcx8ZWn8DcKousCj574I-XY1jFH-3RMp6lmYVza4ZGMBjmpbRkVnayOpGK0rWdU7IvjKKtw";
   const regionRouting = "europe"; // For match-v5 (EUW/EUNE)
   
   try {
