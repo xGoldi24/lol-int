@@ -39,13 +39,22 @@ export default async function handler(req, res) {
     const deaths = participant.deaths;
     const champ = participant.championName;
 
-    let message = `REDSAPDES played ${champ} and had ${deaths} death${deaths === 1 ? '' : 's'} last game.`;
+let message = `REDSAPDES played ${champ} and had ${deaths} death${deaths === 1 ? '' : 's'} last game. `;
 
-    if (deaths >= 10) {
-      message += " 💀 Definitely a spicy one.";
-    } else if (deaths <= 2) {
-      message += " 🧘 Clean af.";
-    }
+if (deaths === 0) {
+  message += "👑 Achieved immortality. Absolute legend.";
+} else if (deaths === 1 || deaths === 2) {
+  message += "🧘 Keeping it cool under pressure. Faker would be proud.";
+} else if (deaths >= 3 && deaths <= 5) {
+  message += "🤔 Played it relatively safe. Respectable.";
+} else if (deaths >= 6 && deaths <= 9) {
+  message += "😬 Caught a few too many skillshots... happens to the best of us.";
+} else if (deaths >= 10 && deaths <= 13) {
+  message += "💀 Putting on an inting masterclass. Maybe dodge next time?";
+} else if (deaths >= 14) {
+  message += "🔥 Absolute griefing. Teemo salutes you.";
+}
+
 
     return res.status(200).send(message);
   } catch (err) {
